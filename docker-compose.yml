@@ -10,7 +10,7 @@ services:
         source: shared
         target: /webapps
     depends_on:
-      - maven-custom
+      - maven
 
   maven:
     build: maven-custom
