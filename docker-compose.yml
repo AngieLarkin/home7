@@ -3,7 +3,8 @@ version: "3.8"
 services:
   tomcat:
     image: nirmata/tomcat9-alpine-jre12-openj9
-    ports: "8080:8080"
+    ports:
+      - "8080:8080"
     volumes:
       - type: volumes
         source: shared
