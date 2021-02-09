@@ -1,21 +1,20 @@
 ---
-version: '3.8'
+version: "3.8"
 services:
   tomcat:
     image: nirmata/tomcat9-alpine-jre12-openj9
     ports: "8080:8080"
-    volumes: :
-       - type: volumes
-       source: shared
-       target: /usr/share/tomcat9/webapps
+    volumes:
+      - type: volumes
+        source: shared
+        target: /usr/share/tomcat9/webapps
 
   maven:
     build: maven-custom
     volumes:
-       - type: volumes
-       source: shared
-       target: /boxfuse-samle-java-war-hello/target
+      - type: volumes
+        source: shared
+        target: /boxfuse-samle-java-war-hello/target
 
 volumes:
   shared:
-...
