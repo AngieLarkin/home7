@@ -4,17 +4,17 @@ services:
   tomcat:
     image: nirmata/tomcat9-alpine-jre12-openj9
     ports: "8080:8080"
-    volume:
-      - type: volumes
-      source: shared
-      target: /usr/share/tomcat9/webapps
+    volumes: :
+       - type: volumes
+       source: shared
+       target: /usr/share/tomcat9/webapps
 
   maven:
     build: maven-custom
-    volume:
-      - type: volumes
-      source: shared
-      target: /boxfuse-samle-java-war-hello/target
+    volumes:
+       - type: volumes
+       source: shared
+       target: /boxfuse-samle-java-war-hello/target
 
 volumes:
   shared:
