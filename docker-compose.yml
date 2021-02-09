@@ -8,7 +8,7 @@ services:
     volumes:
       - type: volume
         source: shared
-        target: /usr/share/tomcat9/webapps
+        target: /webapps
 
   maven:
     build: maven-custom
