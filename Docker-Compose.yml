@@ -15,3 +15,6 @@ services:
       - type: volumes
       source: shared
       target: /boxfuse-samle-java-war-hello/target
+
+volumes:
+  shared:
