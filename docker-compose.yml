@@ -9,7 +9,8 @@ services:
       - type: volume
         source: shared
         target: /webapps
-    depends_on: maven-custom
+    depends_on:
+      - maven-custom
 
   maven:
     build: maven-custom
