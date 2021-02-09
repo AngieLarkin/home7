@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
-RUN apt-get update && apt-get install maven && apt-get install git
+FROM maven:3.6.3-jdk-8-openj9
 WORKDIR /root
-RUN git clone https://github.com/boxfuse-samle-java-war-hello.git
-RUN mvn -f ./boxfuse-samle-java-war-hello/pom.xml package
-CMD [""]
+RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+WORKDIR /root/boxfuse-sample-java-war-hello
+RUN mvn -f pom.xml package
+CMD ["mvn"]
