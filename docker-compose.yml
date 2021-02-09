@@ -6,14 +6,14 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - type: volumes
+      - type: volume
         source: shared
         target: /usr/share/tomcat9/webapps
 
   maven:
     build: maven-custom
     volumes:
-      - type: volumes
+      - type: volume
         source: shared
         target: /root/boxfuse-samle-java-war-hello/target
 
