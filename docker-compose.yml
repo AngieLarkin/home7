@@ -5,10 +5,7 @@ services:
     image: nirmata/tomcat9-alpine-jre12-openj9
     ports:
       - "8080:8080"
-    volumes:
-      - type: volume
-        source: vol4
-        target: /opt/apache-tomcat-9.0.31/webapps
+    volumes_from: maven-custom
     depends_on:
       - maven
 
