@@ -7,8 +7,8 @@ services:
       - "8080:8080"
     volumes:
       - type: volume
-        source: vol7
-        target: /mnt
+        source: vol8
+        target: /usr/local/tomcat/webapps
 
     depends_on:
       - maven
@@ -17,8 +17,8 @@ services:
     build: maven-custom
     volumes:
       - type: volume
-        source: vol7
+        source: vol8
         target: /root/boxfuse-sample-java-war-hello/target
 
 volumes:
-  vol7:
+  vol8:
