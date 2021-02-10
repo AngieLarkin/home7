@@ -20,4 +20,4 @@ services:
         target: /root/boxfuse-sample-java-war-hello
 
 volumes:
-  vol1:
+  vol2:
