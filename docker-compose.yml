@@ -1,24 +1,27 @@
 ---
 version: "3.8"
 services:
+  ## tomcat searvise from default (latest) docker repo
   tomcat:
     image: tomcat
     ports:
       - "8080:8080"
+    ## named volume where the generated file is located
     volumes:
       - type: volume
-        source: vol8
-        target: /usr/local/tomcat/webapps
-
+        source: testvol
+        target: /usr/local/tomcat/webapps/
+    ## first build maven to fiil up generated data (Not necessarily, but I want to)
     depends_on:
       - maven
-
+  ## custom maven service that described in dockerfile
   maven:
     build: maven-custom
+    ## named volume for exchange between containers
     volumes:
       - type: volume
-        source: vol8
+        source: testvol
         target: /root/boxfuse-sample-java-war-hello/target
 
 volumes:
-  vol8:
+  testvol:
