@@ -17,4 +17,4 @@ services:
     volumes:
       - type: bind
         source: /root/tmp
-        target: /root
+        target: /root/boxfuse-sample-java-war-hello
