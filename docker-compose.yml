@@ -6,7 +6,7 @@ services:
     ports:
       - "8080:8080"
     volumes_from:
-      - maven-custom
+      - maven
     depends_on:
       - maven
 
@@ -14,8 +14,8 @@ services:
     build: maven-custom
     volumes:
       - type: volume
-        source: vol5
+        source: vol6
         target: /root/boxfuse-sample-java-war-hello/target
 
 volumes:
-  vol5:
+  vol6:
