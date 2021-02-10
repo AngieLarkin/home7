@@ -17,7 +17,7 @@ services:
     volumes:
       - type: volume
         source: shared
-        target: /root/boxfuse-samle-java-war-hello/target
+        target: /root/boxfuse-sample-java-war-hello/target
 
 volumes:
   shared:
