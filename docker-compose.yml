@@ -15,7 +15,7 @@ services:
   maven:
     build: maven-custom
     volumes:
-      - type: voluem
+      - type: volume
         source: vol1
         target: /root/boxfuse-sample-java-war-hello
 
