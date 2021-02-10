@@ -4,4 +4,4 @@ WORKDIR /root
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /root/boxfuse-sample-java-war-hello
 RUN mvn -f pom.xml package
-CMD [""]
+CMD ["mvn"]
