@@ -6,8 +6,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - type: bind
-        source: /root/tmp
+      - type: volume
+        source: vol1
         target: /webapps
     depends_on:
       - maven
@@ -15,6 +15,6 @@ services:
   maven:
     build: maven-custom
     volumes:
-      - type: bind
-        source: /root/tmp
+      - type: voluem
+        source: vol1
         target: /root/boxfuse-sample-java-war-hello
