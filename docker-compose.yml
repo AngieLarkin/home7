@@ -6,7 +6,7 @@ services:
     ports:
       - "8080:8080"
     volumes_from:
-      - maven
+      - home7_maven_1
     depends_on:
       - maven
 
