@@ -13,8 +13,8 @@ services:
     build: maven-custom
     volumes:
       - type: volume
-        source: vol4
+        source: vol5
         target: /root/boxfuse-sample-java-war-hello/target
 
 volumes:
-  vol4:
+  vol5:
